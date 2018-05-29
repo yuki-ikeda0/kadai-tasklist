@@ -59,8 +59,8 @@ private
 
   # Strong Parameter
   def message_params
-    params.require(:task).permit(:content)
-    params.require(:task).permit(:status)
+    params.require(:task).permit(:content, :status)
+   # params.require(:task).permit(:status)
   end
 end  
 #----
