@@ -1,2 +1,53 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
+
+
+<div class="row">
+  <aside class="col-xs-2">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= @user.name %></h3>
+      </div>
+      <div class="panel-body">
+        <img class="media-object img-rounded img-responsive" src="<%= gravatar_url(@user, { size: 500 }) %>" alt="">
+      </div>
+    </div>
+  </aside>
+ <div class="col-xs-10">
+   <table class="table table-striped table table-hover table-condensed"">
+   <!-- <ul class="nav nav-tabs nav-justified"> -->
+    <tr>
+      <th class="text-center">id</th>
+      <th class="text-center">タスク</th>
+      <th class="text-center">ステータス</th>
+    </tr> 
+    <tr>
+        <td class="text-center">1</td>
+        <td class="text-center">Show.htmlの作成</td>
+        <td class="text-center">作成中</td>
+    </tr>
+  </table>  
+      
+      <!--<li><a href="#">タスク</a></li>
+      <li><a href="#">ステータス</a></li>
+      <!--<li><a href="#">Followers</a></li> 
+    </ul>-->
+ <!-- </div> -->
+</div>
+
+<!--
+<table class="table table-bordered">
+        <tr>
+          <th>id</th>
+            <td><%# <%= @tasks.id %></td>
+        </tr>
+        <tr>
+          <th>ステータス</th>
+            <td><li><a href="#">Microposts</a></li></td>
+        </tr>
+        <tr>
+          <th>メッセージ</th>
+            <td><li><a href="#">Microposts</a></li>/td>
+        </tr>
+      </table>        
+-->        
