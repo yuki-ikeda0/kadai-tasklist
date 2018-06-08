@@ -1,0 +1,20 @@
+<ul class="taskapp-list">
+   <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>ステータス</th>
+        <th>メッセージ</th>
+      </tr>
+    </thead>
+    <tbody>
+     <% taskapps.each do |taskapp| %>
+      <tr>
+        <th><%= link_to taskapp.id, taskapp %></th>
+        <th><%= taskapp.status %></th>
+        <th><%= taskapp.content %></th>
+      </tr>
+       <% end %>
+    </tbody>
+  </table>
+</ul>

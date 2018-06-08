@@ -1,0 +1,36 @@
+<h1>タスク編集</h1>
+
+
+<!--
+<p>ステータス: <%#<%= @taskapps.status %></p>
+<p>メッセージ: <%#<%= @taskapps.content %></p>-->
+<%= link_to '一覧に戻る', taskapps_path %>
+
+
+ <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>ステータス</th>
+        <th>メッセージ</th>
+      </tr>
+    </thead>
+    <tbody>
+       <tr>
+        <th><%= @taskapp.id %></th>
+        <th><%= @taskapp.status %></th>
+        <th><%= @taskapp.content %></th>
+      </tr>
+    </tbody>
+  </table>  
+    <%= link_to 'このメッセージを編集する', edit_taskapp_path(@taskapp), class: 'btn btn-default' %>
+    <%= link_to 'このメッセージを削除する', @taskapp, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-mx' %>
+ 
+    
+
+
+
+
+
+
+

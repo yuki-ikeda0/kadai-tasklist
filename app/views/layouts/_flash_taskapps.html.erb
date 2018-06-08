@@ -1,0 +1,5 @@
+<% flash.each do |taskapp_type, taskapp| %>
+ <!--<div><%= taskapp %></div> -->
+ <div class="alert alert-<%= taskapp_type %>"><%= taskapp %></div>
+ 
+<% end %>
