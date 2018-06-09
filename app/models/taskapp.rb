@@ -3,4 +3,5 @@ class Taskapp < ApplicationRecord
   
   validates :user_id, presence: true # ユーザの紐付け無しには Micropost を保存不可
   validates :content, presence: true, length: { maximum: 255 }
+  validates :status, presence: true, length: { maximum: 255 }
 end

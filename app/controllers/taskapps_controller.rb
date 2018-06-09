@@ -20,15 +20,16 @@ class TaskappsController < ApplicationController
   end
 #----
   def create
-      @taskapp = current_user.taskapps.build(taskapp_params)
+      @taskapps = current_user.taskapps.build(taskapp_params)
       
-    if @taskapp.save
+    if @taskapps.save
       flash[:success] = 'メッセージを投稿しました。'
       redirect_to root_url
     else
-      @taskapp = current_user.microposts.order('created_at DESC').page(params[:page])
+      @taskapps = current_user.taskapps.order('created_at DESC')
       flash.now[:danger] = 'メッセージの投稿に失敗しました。'
       render 'taskapps/index'
+      
     end
   end
 
@@ -40,14 +41,13 @@ class TaskappsController < ApplicationController
 #----
   def update
     @taskapp = current_user.taskapps.find_by(id: params[:id])
-      
     if @taskapp.update(taskapp_params)
       flash[:success] = 'Message は正常に更新されました。'
       redirect_to @taskapp
     else
-      @taskapp = current_user.microposts.order('created_at DESC').page(params[:page])
+      @taskapps = current_user.taskapps.order('created_at DESC')
       flash.now[:danger] = 'Message は更新されませんでした。'
-      render :edit
+      render 'taskapps/show'
     end
   end
 #----

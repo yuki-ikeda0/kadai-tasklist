@@ -1,11 +1,7 @@
-<h1>タスク編集</h1>
+<div class="row">
+  <div class="col-xs-6">
 
-
-<!--
-<p>ステータス: <%#<%= @taskapps.status %></p>
-<p>メッセージ: <%#<%= @taskapps.content %></p>-->
-<%= link_to '一覧に戻る', taskapps_path %>
-
+<h1>タスクの詳細</h1>
 
  <table class="table table-striped">
     <thead>
@@ -23,6 +19,7 @@
       </tr>
     </tbody>
   </table>  
+    <%= link_to '一覧に戻る', taskapps_path %>
     <%= link_to 'このメッセージを編集する', edit_taskapp_path(@taskapp), class: 'btn btn-default' %>
     <%= link_to 'このメッセージを削除する', @taskapp, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-mx' %>
  
